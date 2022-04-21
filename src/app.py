@@ -1,5 +1,6 @@
 # Create simple Discord bot that responds to messages with a random quote
 import random
+import os
 
 import discord
 from discord.ext import commands
@@ -24,6 +25,6 @@ async def on_ready():
     print('------')
 
 if __name__ == '__main__':
-    client.run(TOKEN)
+    client.run(os.environ['TOKEN'])
 
 
