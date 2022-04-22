@@ -3,7 +3,6 @@ from typing import Dict
 import logging
 import requests
 
-
 logger = logging.getLogger(__name__)
 
 class GoogleTranslateAPI:
@@ -25,4 +24,4 @@ class GoogleTranslateAPI:
             self.url, headers=self.headers, data=data
         )
         logger.info(f"{response}")
-        return response.json()["data"]["translations"][0]["translatedText"]
+        return response.json()
