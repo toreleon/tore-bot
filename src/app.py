@@ -5,7 +5,7 @@ import os
 import discord
 from discord.ext import commands
 
-from .translate.translate_api import GoogleTranslateAPI
+from translate.translate_api import GoogleTranslateAPI
 
 client = commands.Bot(command_prefix='!')
 translator = GoogleTranslateAPI()
