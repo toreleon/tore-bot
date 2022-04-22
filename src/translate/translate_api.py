@@ -1,7 +1,10 @@
 import os
 from typing import Dict
+import logging
 import requests
 
+
+logger = logging.getLogger(__name__)
 
 class GoogleTranslateAPI:
     def __init__(self) -> None:
@@ -21,4 +24,5 @@ class GoogleTranslateAPI:
         response: requests.Response = requests.post(
             self.url, headers=self.headers, data=data
         )
+        logger.info(f"{response}")
         return response.json()["data"]["translations"][0]["translatedText"]
