@@ -24,4 +24,4 @@ class GoogleTranslateAPI:
             self.url, headers=self.headers, data=data
         )
         logger.info(f"{response}")
-        return response.json()
+        return response.json()["data"]["translations"][0]["translatedText"]
